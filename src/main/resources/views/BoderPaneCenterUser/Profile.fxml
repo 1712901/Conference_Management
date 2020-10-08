@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="534.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.User.ControllerProfile">
+   <children>
+      <BorderPane fx:id="bodePane" layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox alignment="CENTER_RIGHT" prefHeight="64.0" prefWidth="571.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" minWidth="-Infinity" prefHeight="64.0" prefWidth="210.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="207.0" text="Thông tin tài khoản" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children></HBox>
+                  <VBox prefHeight="64.0" prefWidth="560.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="64.0" prefWidth="203.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="438.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <TextField maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="269.0" promptText="Tìm kiếm hội nghị">
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <FontAwesomeIconView glyphName="SEARCH" size="18" wrappingWidth="10.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="146.0">
+                                 <children>
+                                    <JFXButton fx:id="btnLogout" buttonType="RAISED" onAction="#ActionLogout" prefHeight="32.0" prefWidth="66.0" style="-fx-background-color: #f74053;" text="Logout" textFill="WHITE">
+                                       <font>
+                                          <Font name="Roboto Bold" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" prefHeight="60.0" prefWidth="317.0" spacing="10.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox alignment="TOP_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="210.0" spacing="20.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="imAvata" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <JFXButton fx:id="btnEdit" contentDisplay="GRAPHIC_ONLY" onAction="#EditAvatarImage">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="EDIT" size="18" text="" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextField fx:id="edtName" labelFloat="true" promptText="Họ tên" />
+                  <JFXTextField fx:id="edtEmail" labelFloat="true" promptText="Email" />
+                  <TextArea fx:id="edtAddress" prefHeight="93.0" prefWidth="200.0" promptText="Địa chỉ" />
+                  <JFXButton fx:id="btnUpdate" buttonType="RAISED" onAction="#UpdateAction" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #2196f3;" text="Change" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnChangePw" onAction="#ActionChange" text="Change password" underline="true" />
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </VBox>
+         </left>
+         <center>
+            <FlowPane fx:id="flowPane" prefHeight="230.0" prefWidth="528.0" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding></FlowPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

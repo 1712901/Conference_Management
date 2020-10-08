@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.User.ControllerTableviewHN">
+   <children>
+      <TableView fx:id="tbvHoiNghi" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="141.0" text="Tên Hội nghị" />
+          <TableColumn fx:id="colTGBatDau" prefWidth="58.0" text="TG Bắt Đầu" />
+            <TableColumn fx:id="colTimeKT" prefWidth="75.0" text="TG Kết Thúc" />
+            <TableColumn fx:id="colDiaDiem" prefWidth="165.0" text="Địa điểm" />
+            <TableColumn fx:id="colAction" prefWidth="75.0" text="Action" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+   <padding>
+      <Insets left="25.0" right="25.0" />
+   </padding>
+</AnchorPane>

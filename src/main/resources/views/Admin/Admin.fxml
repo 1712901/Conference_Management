@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="boderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="1003.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.ControllerAdmin">
+   <left>
+      <AnchorPane prefHeight="276.0" prefWidth="200.0" style="-fx-background-color: #2286c3;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" layoutX="38.0" layoutY="42.0" prefHeight="166.0" prefWidth="162.0" spacing="10.0">
+               <children>
+                  <JFXButton fx:id="btnHoiNghi" alignment="TOP_LEFT" prefHeight="32.0" prefWidth="163.0" text="Hội nghị">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CUBES" size="18" wrappingWidth="30.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnDiaDiem" alignment="TOP_LEFT" prefHeight="32.0" prefWidth="163.0" text="Địa điểm">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="MAP_MARKER" size="24" wrappingWidth="30.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnYeuCau" alignment="TOP_LEFT" prefHeight="32.0" prefWidth="163.0" text="Yêu cầu">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="ENVELOPE_SQUARE" size="24" wrappingWidth="30.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnUsers" alignment="TOP_LEFT" prefHeight="32.0" prefWidth="163.0" text="Users">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="USERS" size="18" wrappingWidth="30.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnLogout" alignment="TOP_LEFT" onAction="#ActionLogout" prefHeight="33.0" prefWidth="163.0" text="Logout">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="SIGN_OUT" size="24" wrappingWidth="30.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <HBox prefHeight="65.0" prefWidth="771.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="ADMIN" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #2286c3;" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="lbName" text="Nguyễn văn a">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="25.0" />
+               </padding></HBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <fx:include source="../BoderPaneCenter/CenterHoiNghi.fxml" />
+   </center>
+</BorderPane>

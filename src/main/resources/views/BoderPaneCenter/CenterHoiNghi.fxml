@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.ControllerCenterHN">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="64.0" prefWidth="571.0" spacing="15.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" prefHeight="64.0" prefWidth="745.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="165.0" text="Danh Sách Hội Nghị">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="308.0" promptText="Search" />
+                        <FontAwesomeIconView glyphName="SEARCH" size="18" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="64.0" prefWidth="477.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="btnAdd" contentDisplay="GRAPHIC_ONLY" ellipsisString="" graphicTextGap="0.0" onAction="#ShowDetail" prefHeight="25.0" prefWidth="0.0" style="-fx-background-color: #fff;">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="PLUS_SQUARE" size="16" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnRefresh" contentDisplay="GRAPHIC_ONLY" ellipsisString="" graphicTextGap="0.0" onAction="#RefreshAction" prefHeight="25.0" prefWidth="0.0" style="-fx-background-color: #fff;">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="REFRESH" size="16" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <TableView fx:id="tbvHoiNghi" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="colName" prefWidth="75.0" text="Tên Hội Nghị" />
+                      <TableColumn fx:id="colDesc" prefWidth="75.0" text="Mô Tả" />
+                        <TableColumn fx:id="colStartTime" prefWidth="75.0" text="TG Bắt Đầu" />
+                        <TableColumn fx:id="colEndTime" prefWidth="75.0" text="TG Kết Thúc" />
+                        <TableColumn fx:id="colAddress" prefWidth="75.0" text="Địa Điểm" />
+                        <TableColumn fx:id="colCount" prefWidth="75.0" text="SL Đăng ký" />
+                        <TableColumn fx:id="colAction" prefWidth="75.0" text="Hành động" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding></AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

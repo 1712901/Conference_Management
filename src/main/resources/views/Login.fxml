@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6c9cba;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerLogin">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="342.0" prefWidth="465.0" style="-fx-background-color: WHITE; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4; -fx-border-radius: 4; -fx-padding: 8;">
+         <children>
+            <JFXTextField fx:id="edtUsername" labelFloat="true" layoutX="75.0" layoutY="147.0" maxWidth="341.0" minWidth="233.0" onMouseClicked="#Mouse" prefHeight="31.0" prefWidth="341.0" promptText="Enter Username">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="edtPassword" labelFloat="true" layoutX="75.0" layoutY="195.0" maxWidth="341.0" minWidth="235.0" prefHeight="31.0" prefWidth="341.0" promptText="Enter password">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="bnLogin" buttonType="RAISED" layoutX="75.0" layoutY="259.0" onAction="#ActionLogin" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #2196f3;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="75.0" layoutY="53.0" text="LOGIN">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnSignup" buttonType="RAISED" layoutX="199.0" layoutY="259.0" onAction="#ActionSignUp" prefHeight="32.0" prefWidth="222.0" style="-fx-background-color: #c9d6d5;" text="Don't have an account ? Sign up" textFill="#5b3d3d">
+               <font>
+                  <Font name="Roboto Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="idMess" layoutX="75.0" layoutY="305.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

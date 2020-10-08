@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="75.0" prefWidth="177.0" style="-fx-background-color: #FFFFFF; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-border-radius: 8px; -fx-background-radius: 8px;" type="javafx.scene.layout.VBox" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="lbDate" alignment="CENTER" ellipsisString="" maxWidth="1.7976931348623157E308" text="Datetime" />
+      <Label fx:id="lbName" text="Hội nghi quá trình">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbDesc" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Thang gia" VBox.vgrow="ALWAYS" />
+   </children>
+   <padding>
+      <Insets left="5.0" />
+   </padding>
+</fx:root>
